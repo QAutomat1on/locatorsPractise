@@ -13,7 +13,7 @@ while ( i <= 345) {
 
 let a = 1;
 let sum = 0;
-while(a<=100){
+while(a <= 100){
     sum += a; //+= operator that allow us to sum 1st and 2nd variables.
     console.log(sum)
     a++;
@@ -30,7 +30,7 @@ while(b >= 1);
 
 // - Напишіть програму  яка відображає найбільше ціле число з двох цілих чисел. (if.. + покрийте тестами)
 
-function figureMoreThanFigure(figure1,figure2){
+function compareFigures(figure1,figure2){
 if( figure1 > figure2) {
     return(`Figure1 '${figure1}' > Figure2 '${figure2}' `);
     } else if ( figure1 === figure2) {
@@ -41,19 +41,19 @@ if( figure1 > figure2) {
 };
 
 test('1st > 2nd', async() => {
-    const answer = figureMoreThanFigure(11,5)
+    const answer = compareFigures(11,5)
     console.log(answer);
     expect(answer).toBeTruthy();
 });
 
 test('1st === 2nd', async() => {
-    const answer = figureMoreThanFigure(11,11)
+    const answer = compareFigures(11,11)
     console.log(answer);
     expect(answer).toBeTruthy();
 });
 
 test('2nd > 1st', async() => {
-    const answer = figureMoreThanFigure(11,22)
+    const answer = compareFigures(11,22)
     console.log(answer);
     expect(answer).toBeTruthy();
 });
